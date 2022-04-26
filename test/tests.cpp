@@ -1,8 +1,8 @@
+// Copyright 2022 UNN-IASR
 #include <gtest/gtest.h>
 #include "Automata.h"
 
-TEST(task1, test1) 
-{
+TEST(task1, test1) {
     Automata a = Automata();
     a.on();
     a.cancel();
@@ -10,24 +10,22 @@ TEST(task1, test1)
     EXPECT_EQ(1, result);
 }
 
-TEST(task2, test2) 
-{
+TEST(task2, test2) {
     Automata a = Automata();
     a.on();
     a.coin(1);
     a.choice(1);
     int result = a.getState();
-    EXPECT_EQ(2, result); 
+    EXPECT_EQ(2, result);
 }
 
-TEST(task3, test3) 
-{
+TEST(task3, test3) {
     Automata a = Automata();
     a.on();
     a.coin(200);
     a.choice(1);
     int result = a.getState();
-    EXPECT_EQ(4, result); 
+    EXPECT_EQ(4, result);
 }
 
 TEST(task4, test4) {
