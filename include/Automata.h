@@ -3,11 +3,13 @@
 #include <iostream>
 #include <string>
 
+using std::string;
+
 class Automata{
  private:
-    enum State 
+    enum State
     {OFF, WAIT, ACCEPT, CHECK, COOK};
-    
+
  public:
     int cash = 0; //текущая сумма
     string menu[2] = { "1" , "2"}; //названия напитков;
@@ -18,10 +20,10 @@ class Automata{
     void off();//выкл;
     void coin(int m); //зачисление MONEY;
     string* etMenu(); // считывание меню;
-    State getState(){return state;};//считывание текущего;
+    State getState(){return state;}//считывание текущего;
     void choice(int ch);//выбор напитка;
     void check();//проверка суммы;
     int cancel();//отмена обслуживания;
-    void cook();//приготовление напитка;    
-    void finish(int f);//завершение обслуживания пользователя.	
+    void cook();//приготовление напитка;
+    void finish(int f);//завершение обслуживания пользователя.
 };
