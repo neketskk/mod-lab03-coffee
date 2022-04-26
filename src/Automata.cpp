@@ -34,8 +34,11 @@ void Automata::choice(int ch) {
 
 void Automata::check() {
     if (state == CHECK) {
-        if (cash - prices[choice_p] >= 0) cook();
-        else state = ACCEPT;
+        if (cash - prices[choice_p] >= 0) {
+            cook();
+        } else {
+            state = ACCEPT;
+        }
     }
 }
 
@@ -45,8 +48,9 @@ int Automata::cancel() {
         int r = cash;
         cash = 0;
         return r;
+    } else {
+        return 0;
     }
-    else return 0;
 }
 
 void Automata::cook() {
