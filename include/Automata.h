@@ -20,7 +20,7 @@ class Automata{
     void off();//выкл;
     void coin(int m); //зачисление MONEY;
     string* etMenu(); // считывание меню;
-    State getState(){return state;}//считывание текущего;
+    State getState() {return state;}//считывание текущего;
     void choice(int ch);//выбор напитка;
     void check();//проверка суммы;
     int cancel();//отмена обслуживания;
